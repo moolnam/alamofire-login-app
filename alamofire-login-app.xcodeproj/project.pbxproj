@@ -11,6 +11,9 @@
 		787E288C2845E18B002651FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E288B2845E18B002651FB /* ContentView.swift */; };
 		787E288E2845E18C002651FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787E288D2845E18C002651FB /* Assets.xcassets */; };
 		787E28912845E18C002651FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787E28902845E18C002651FB /* Preview Assets.xcassets */; };
+		787E289A2845E1BA002651FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28992845E1BA002651FB /* HomeView.swift */; };
+		787E289F2845E6AA002651FB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E289E2845E6AA002651FB /* LogInView.swift */; };
+		787E28A12845E995002651FB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28A02845E995002651FB /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		787E288B2845E18B002651FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		787E288D2845E18C002651FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787E28902845E18C002651FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		787E28992845E1BA002651FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		787E289E2845E6AA002651FB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		787E28A02845E995002651FB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		787E28882845E18B002651FB /* alamofire-login-app */ = {
 			isa = PBXGroup;
 			children = (
-				787E28892845E18B002651FB /* alamofire_login_appApp.swift */,
 				787E288B2845E18B002651FB /* ContentView.swift */,
+				787E289D2845E2FB002651FB /* Views */,
+				787E28892845E18B002651FB /* alamofire_login_appApp.swift */,
 				787E288D2845E18C002651FB /* Assets.xcassets */,
 				787E288F2845E18C002651FB /* Preview Content */,
 			);
@@ -65,6 +72,16 @@
 				787E28902845E18C002651FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		787E289D2845E2FB002651FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				787E28992845E1BA002651FB /* HomeView.swift */,
+				787E289E2845E6AA002651FB /* LogInView.swift */,
+				787E28A02845E995002651FB /* RegisterView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787E289A2845E1BA002651FB /* HomeView.swift in Sources */,
+				787E28A12845E995002651FB /* RegisterView.swift in Sources */,
 				787E288C2845E18B002651FB /* ContentView.swift in Sources */,
+				787E289F2845E6AA002651FB /* LogInView.swift in Sources */,
 				787E288A2845E18B002651FB /* alamofire_login_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
