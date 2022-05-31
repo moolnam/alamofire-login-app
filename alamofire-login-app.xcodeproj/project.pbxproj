@@ -14,6 +14,10 @@
 		787E289A2845E1BA002651FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28992845E1BA002651FB /* HomeView.swift */; };
 		787E289F2845E6AA002651FB /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E289E2845E6AA002651FB /* LogInView.swift */; };
 		787E28A12845E995002651FB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28A02845E995002651FB /* RegisterView.swift */; };
+		787E28A32845ECB6002651FB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28A22845ECB6002651FB /* ProfileView.swift */; };
+		787E28A62845EF40002651FB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E28A52845EF40002651FB /* UserData.swift */; };
+		787E28AA2845F840002651FB /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 787E28A92845F840002651FB /* URLImage */; };
+		787E28AC2845F840002651FB /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 787E28AB2845F840002651FB /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,9 @@
 		787E28992845E1BA002651FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		787E289E2845E6AA002651FB /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		787E28A02845E995002651FB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		787E28A22845ECB6002651FB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		787E28A52845EF40002651FB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		787E28A72845F3A9002651FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787E28AC2845F840002651FB /* URLImageStore in Frameworks */,
+				787E28AA2845F840002651FB /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +66,11 @@
 		787E28882845E18B002651FB /* alamofire-login-app */ = {
 			isa = PBXGroup;
 			children = (
-				787E288B2845E18B002651FB /* ContentView.swift */,
-				787E289D2845E2FB002651FB /* Views */,
+				787E28A72845F3A9002651FB /* Info.plist */,
 				787E28892845E18B002651FB /* alamofire_login_appApp.swift */,
+				787E288B2845E18B002651FB /* ContentView.swift */,
+				787E28A42845EF24002651FB /* Models */,
+				787E289D2845E2FB002651FB /* Views */,
 				787E288D2845E18C002651FB /* Assets.xcassets */,
 				787E288F2845E18C002651FB /* Preview Content */,
 			);
@@ -80,8 +91,17 @@
 				787E28992845E1BA002651FB /* HomeView.swift */,
 				787E289E2845E6AA002651FB /* LogInView.swift */,
 				787E28A02845E995002651FB /* RegisterView.swift */,
+				787E28A22845ECB6002651FB /* ProfileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		787E28A42845EF24002651FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				787E28A52845EF40002651FB /* UserData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +120,10 @@
 			dependencies = (
 			);
 			name = "alamofire-login-app";
+			packageProductDependencies = (
+				787E28A92845F840002651FB /* URLImage */,
+				787E28AB2845F840002651FB /* URLImageStore */,
+			);
 			productName = "alamofire-login-app";
 			productReference = 787E28862845E18B002651FB /* alamofire-login-app.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 787E287D2845E18B002651FB;
+			packageReferences = (
+				787E28A82845F840002651FB /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 787E28872845E18B002651FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,8 +183,10 @@
 			files = (
 				787E289A2845E1BA002651FB /* HomeView.swift in Sources */,
 				787E28A12845E995002651FB /* RegisterView.swift in Sources */,
+				787E28A62845EF40002651FB /* UserData.swift in Sources */,
 				787E288C2845E18B002651FB /* ContentView.swift in Sources */,
 				787E289F2845E6AA002651FB /* LogInView.swift in Sources */,
+				787E28A32845ECB6002651FB /* ProfileView.swift in Sources */,
 				787E288A2845E18B002651FB /* alamofire_login_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +319,7 @@
 				DEVELOPMENT_TEAM = WQD7F9D6LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "alamofire-login-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +349,7 @@
 				DEVELOPMENT_TEAM = WQD7F9D6LV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "alamofire-login-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,6 +390,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		787E28A82845F840002651FB /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		787E28A92845F840002651FB /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787E28A82845F840002651FB /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		787E28AB2845F840002651FB /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 787E28A82845F840002651FB /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 787E287E2845E18B002651FB /* Project object */;
 }

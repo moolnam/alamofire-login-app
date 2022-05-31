@@ -15,11 +15,15 @@ struct HomeView: View {
                     .edgesIgnoringSafeArea(.all)
                 Spacer()
                 VStack {
-                    Image(systemName: "house.fill")
+                    Image(systemName: "bolt.car")
                         .foregroundColor(.white)
                         .font(.system(size: 150))
                         .padding()
-                Spacer()
+                    Text("전기차 충전소 찾기")
+                        .foregroundColor(.white)
+                        .font(.system(size: 30))
+                        .fontWeight(.heavy)
+                    Spacer()
                     VStack {
                         NavigationLink(destination: {
                             LogInView()
@@ -31,7 +35,7 @@ struct HomeView: View {
                                 .foregroundColor(.green)
                         })
                         NavigationLink(destination: {
-                            Text("회원가입 화면")
+                            RegisterView()
                         }, label: {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 400, height: 50, alignment: .center)
@@ -43,7 +47,7 @@ struct HomeView: View {
                     .padding(.bottom, 20)
                     VStack {
                         NavigationLink(destination: {
-                            Text("프로필 화면")
+                            ProfileView()
                         }, label: {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 400, height: 50, alignment: .center)
@@ -60,8 +64,18 @@ struct HomeView: View {
                                 .overlay(Text("사용자 목록 검색"))
                                 .foregroundColor(.green)
                         })
+                        NavigationLink(destination: {
+                            Text("충전소")
+                        }, label: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 400, height: 50, alignment: .center)
+                                .foregroundColor(.white)
+                                .overlay(Text("충전소 검색"))
+                                .foregroundColor(.green)
+                        })
+                        .padding()
                     }
-                Spacer()
+                    Spacer()
                 }
             }
             .navigationTitle("홈")
